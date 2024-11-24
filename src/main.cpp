@@ -1,5 +1,3 @@
-hrhhhhhhhhhhhhhh
-
 #define ERA_DEBUG
 #define DEFAULT_MQTT_HOST "mqtt1.eoh.io"
 #define ERA_AUTH_TOKEN "5e9aa423-c97b-411e-9bd6-d6fd3f571137"
@@ -200,7 +198,7 @@ void setup()
   digitalWrite(MAN_PIN, LOW);
   digitalWrite(AUTO_PIN, LOW);
 
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);// bat man hinh leen 
   display.clearDisplay();
   display.display();
 

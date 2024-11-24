@@ -16,8 +16,8 @@
 #include <Zigbee/ERaZigbeeEsp32.hpp>
 #include <Storage/ERaFlashEsp32.hpp>
 #include <PnP/ERaWeb.hpp>
-#include <Adafruit_SSD1306.h>
-#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h> //************* */
+#include <Adafruit_GFX.h>   //************* */
 #if defined(ERA_DETECT_SSL)
 #include <WiFiClientSecure.h>
 #endif
@@ -35,9 +35,9 @@
 #define WIFI_AP_IP IPAddress(192, 168, 27, 1)
 #define WIFI_AP_Subnet IPAddress(255, 255, 255, 0)
 // /****************************OLED**********************************
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
-#define OLED_RESET -1
+#define SCREEN_WIDTH 128    //************* */
+#define SCREEN_HEIGHT 64    //************* */
+#define OLED_RESET -1       //************* */
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 //  **************************************************************/
 #define WIFI_SPEC_SSID "PLG.ssid"
@@ -1786,15 +1786,15 @@ void ERaPnP<Transport>::connectWiFi(const char *ssid, const char *pass)
         ERaWatchdogFeed();
 
         ERA_LOG(TAG, ERA_PSTR("Connecting to %s..."), ssid);
-        congfic_display();
-        display.setTextSize(1);
-        display.setCursor(35, 10);
-        display.println(ssid);
-        display.setCursor(35, 20);
-        display.println(pass);
-        display.setCursor(35, 31);
-        display.println("CONNECTING");
-        display.display();
+        congfic_display();//************* */
+        display.setTextSize(1);//************* */
+        display.setCursor(35, 10);//************* */
+        display.println(ssid);//************* */
+        display.setCursor(35, 20);//************* */
+        display.println(pass);//************* */
+        display.setCursor(35, 31);//************* */
+        display.println("CONNECTING");//************* */
+        display.display();//************* */
         if (this->scanWiFiConnect)
         {
             if (pass && strlen(pass))
